@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: black;
+    font-family: sans-serif;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+
+button{
+    visibility: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: sticky;
+    top:0;
+}
+
+main{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+#content{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+}
+
+.box{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.input {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: 5px solid yellow;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #ffffff;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 30vw;
+    background: #272133;
+    border-radius: 10px;
+}
+
+i{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    color: yellow;
+    transition: .2s;
+}
+
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}
+
+footer{
+    height: 5vh;	
+    width: auto;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
