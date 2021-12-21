@@ -5,30 +5,26 @@
         header("location: ".$search_URL.$keywords);
     }
 ?>
- <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+	<title>Website</title>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body onload=display_ct5()>
-    
-    <header>
-        <i class="bi bi-music-note-beamed"></i>  
-         
-    </header>
-
-    <main>
-        <div id="content">
-            <!-- <h1>TIME</h1> -->
-            <span id ="ct5"></span>
-            <script type="text/javascript"> 
+    <!-- <header>
+       <a href="youtube.com"> <i class="bi bi-music-note-beamed"></i> </a> 
+    </header> -->
+	<div class="banner-text">
+		<h2 id ="ct5"></h2>
+        <script type="text/javascript"> 
                 function display_ct5() {
                 var x = new Date()
                 var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
@@ -44,11 +40,8 @@
                 }
                 display_c5()
             </script>
-
-
-            <h2 id="greeting"></h2>
-
-            <script>
+        <h1 id="greeting"></h1>
+        <script>
                 var myDate = new Date();
                 var hrs = myDate.getHours();
 
@@ -64,20 +57,24 @@
                 var txt = "<b>" + greet +", Name <b>!";
                 document.getElementById('greeting').innerHTML =txt;
                 
-            </script> 
-
-            <div class="box">
+            </script>
+        <div class="box">
                 <form action="" method="post" target="_blank">
                     <input type="text" class="input" name="keywords" required>
                     <button name="submitBtn"><i class="bi bi-search"></i></button>
                 </form>
                     <i class="fas fa-search"></i>
             </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>21/12/2021 version</p>
-    </footer>
+	</div>
+	<div class="animation-area">
+		<ul class="box-area">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
 </body>
 </html>
