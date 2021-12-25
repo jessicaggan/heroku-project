@@ -4,6 +4,13 @@
         $keywords = $_POST['keywords'];
         header("location: ".$search_URL.$keywords);
     }
+
+    if(isset($_POST['change-song'])){
+        $youtubeURL = $_POST['youtube-url'];
+        preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtubeURL, $match);
+        $youtube_id = $match[1];
+    }
+
 ?>
 <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
 <!DOCTYPE html>
@@ -19,10 +26,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body onload=display_ct5()>
-    <!-- <header>
-       <a href="youtube.com"> <i class="bi bi-music-note-beamed"></i> </a> 
-    </header> -->
+
 	<div class="banner-text">
+
+        <div class="box-song">
+            <form action="" method="post">
+                <input type="text" class="input" name="youtube-url" required>
+                <button id="change-song" name="change-song"></button>
+            </form>
+                <i class="bi bi-music-note-list"></i>
+        </div>
+
 		<h2 id ="ct5"></h2>
         <script type="text/javascript"> 
                 function display_ct5() {
@@ -58,13 +72,34 @@
                 document.getElementById('greeting').innerHTML =txt;
                 
             </script>
-        <div class="box">
+            <div class="box">
                 <form action="" method="post" target="_blank">
                     <input type="text" class="input" name="keywords" required>
-                    <button name="submitBtn"><i class="bi bi-search"></i></button>
+                    <button id="submitBtn" name="submitBtn"></button>
                 </form>
                     <i class="fas fa-search"></i>
             </div>
+
+        <div id="youtube">
+            <object width="100%" height="300" style="position:absolute;top:-276px;left:-5px">
+                <param name="movie" 
+                    value="http://www.youtube.com/v/<?=$youtube_id?>?hl=en_US&version=3">
+                </param>
+                <param name="allowFullScreen" 
+                    value="true">
+                </param>
+                <param name="allowscriptaccess" 
+                    value="always">
+                </param>
+                <embed src="http://www.youtube.com/v/<?=$youtube_id?>?hl=en_US&version=3"
+                    type="application/x-shockwave-flash" 
+                    width="300" 
+                    height="300" 
+                    allowscriptaccess="always" 
+                    allowfullscreen="true">
+                </embed>
+            </object>
+        </div>    
 	</div>
 	<div class="animation-area">
 		<ul class="box-area">
@@ -76,5 +111,7 @@
 			<li></li>
 		</ul>
 	</div>
-</body>
+
+        
+    </body>
 </html>
