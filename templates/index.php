@@ -95,6 +95,7 @@
                     type="application/x-shockwave-flash" 
                     width="300" 
                     height="300" 
+		    allow='autoplay'
                     allowscriptaccess="always" 
                     allowfullscreen="true">
                 </embed>
