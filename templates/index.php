@@ -10,7 +10,6 @@
         preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtubeURL, $match);
         $youtube_id = $match[1];
     }
-
 ?>
 <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
 <!DOCTYPE html>
@@ -37,7 +36,7 @@
                 <i class="bi bi-music-note-list"></i>
         </div>
 
-		<h2 id ="ct5"></h2>
+		<h2 id ="ct5">{{time}}</h2>
         <script type="text/javascript"> 
                 function display_ct5() {
                 var x = new Date()
@@ -80,7 +79,7 @@
                     <i class="fas fa-search"></i>
             </div>
 
-        <div id="youtube">
+        <!-- <div id="youtube">
             <object width="100%" height="300" style="position:absolute;top:-276px;left:-5px">
                 <param name="movie" 
                     value="http://www.youtube.com/embed/<?=$youtube_id?>?hl=en_US&version=3">
@@ -95,13 +94,24 @@
                     type="application/x-shockwave-flash" 
                     width="300" 
                     height="300" 
-		    allow='autoplay'
+                    allow="autoplay"
                     allowscriptaccess="always" 
                     allowfullscreen="true">
+                    
                 </embed>
             </object>
-        </div>    
+        </div>    -->
+        
+        <div data-video="<?=$youtube_id?>"
+            data-autoplay="1"
+            data-loop="1"
+            id="youtube-audio">
+        </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+
 	</div>
+    <!-- https://codepen.io/mohaiman/pen/MQqMyo -->
 	<div class="animation-area">
 		<ul class="box-area">
 			<li></li>
