@@ -23,6 +23,7 @@ body {
 
 #youtube-audio{
 	visibility: hidden;
+	opacity:0%;
 }
 #youtube:hover{
     visibility: visible;
