@@ -36,6 +36,15 @@
                 <i class="bi bi-music-note-list"></i>
         </div>
 
+        <div data-video="<?=$youtube_id?>"
+            data-autoplay="1"
+            data-loop="1"
+            id="youtube-audio">
+        </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+
+
 		<h2 id ="ct5">{{time}}</h2>
         <script type="text/javascript"> 
                 function display_ct5() {
@@ -102,14 +111,7 @@
             </object>
         </div>    -->
         
-        <div data-video="<?=$youtube_id?>"
-            data-autoplay="1"
-            data-loop="1"
-            id="youtube-audio">
-        </div>
-        <script src="https://www.youtube.com/iframe_api"></script>
-        <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
-
+        
 	</div>
     <!-- https://codepen.io/mohaiman/pen/MQqMyo -->
 	<div class="animation-area">
