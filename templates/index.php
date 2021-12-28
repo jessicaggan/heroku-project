@@ -83,7 +83,7 @@
         <div id="youtube">
             <object width="100%" height="300" style="position:absolute;top:-276px;left:-5px">
                 <param name="movie" 
-                    value="http://www.youtube.com/v/<?=$youtube_id?>?hl=en_US&version=3">
+                    value="http://www.youtube.com/embed/<?=$youtube_id?>?hl=en_US&version=3">
                 </param>
                 <param name="allowFullScreen" 
                     value="true">
@@ -91,7 +91,7 @@
                 <param name="allowscriptaccess" 
                     value="always">
                 </param>
-                <embed src="http://www.youtube.com/v/<?=$youtube_id?>?hl=en_US&version=3"
+                <embed src="http://www.youtube.com/embed/<?=$youtube_id?>?hl=en_US&version=3"
                     type="application/x-shockwave-flash" 
                     width="300" 
                     height="300" 
