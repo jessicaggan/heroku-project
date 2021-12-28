@@ -25,6 +25,7 @@ body {
 	padding-top: 10px;
 	padding-left: 5%;
 	width: 50px;
+	filter: invert(88%) sepia(98%) saturate(6663%) hue-rotate(223deg) brightness(104%) contrast(98%);
 }
 #youtube:hover{
     visibility: visible;
