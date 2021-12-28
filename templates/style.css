@@ -21,11 +21,10 @@ body {
 	filter: brightness(25%);
 }
 
-#youtube-audio{
-	visibility: hidden;
-	opacity:0%;
-	width:0%;
-	height:0%;
+#youtube-audio img{
+	padding-top: 20%;
+	padding-left: 5%;
+	width: 50px;
 }
 #youtube:hover{
     visibility: visible;
